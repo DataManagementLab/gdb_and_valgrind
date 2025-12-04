@@ -1,0 +1,57 @@
+set pagination off
+set confirm off
+
+# Load binary
+file where-frame.out
+# Set breakpoint to deepest level
+break where-frame.cpp:8
+# Launch program, only halt on breakpoints or exceptions
+run
+
+# Show stack trace
+where
+
+# Change to Frame 0 [func5]
+frame 0
+# Show source
+list
+# Print var5 in current stack frame (Frame 0, func5)
+print var5
+
+# Change to Frame 1 [func4]
+frame 1
+# Show source
+list
+# Print var4 in current stack frame (Frame 1)
+print var4
+
+# Change to Frame 2 [func3]
+frame 2
+# Show source
+list
+# Print var3 in current stack frame (Frame 2)
+print var3
+
+# Change to Frame 3 [func2]
+frame 3
+# Show source
+list
+# Print var2 in current stack frame (Frame 3)
+print var2
+
+# Change to Frame 4 [func1]
+frame 4
+# Show source\n
+list
+# Print var1 in current stack frame (Frame 4)
+print var1
+
+# Change to Frame 5 [main]
+frame 5
+# Show source
+list
+# Print var_main in current stack frame (Frame 5)
+print var_main
+
+# Quit the example
+quit

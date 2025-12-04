@@ -1,0 +1,86 @@
+set pagination off
+set confirm off
+# Load binary
+printf "(gdb) file navigate.out\n"
+file navigate.out
+echo \n\n\n
+
+# Start the debugged program stopping at the beginning of the main procedure
+printf "(gdb) start\n"
+start
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Goto next line in source, stepping over function calls
+printf "(gdb) next\n"
+next
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Resume execution until next line in source, stepping over function calls
+printf "(gdb) next\n"
+next
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Create a breakpoint at line 27 in navigate.cpp
+printf "(gdb) break navigate.cpp:27\n"
+break navigate.cpp:27
+echo \n\n\n
+
+# Continue execution until next breakpoint
+printf "(gdb) continue\n"
+continue
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Resume execution until next line in source, stepping into function calls
+printf "(gdb) step\n"
+step
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Resume execution until next line in source, stepping over function calls
+printf "(gdb) next\n"
+next
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Continue running until just after function in the selected stack frame returns
+printf "(gdb) finish\n"
+finish
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Quit the example
+printf "(gdb) quit\n"
+quit
+echo \n\n\n

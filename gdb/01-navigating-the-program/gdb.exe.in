@@ -1,0 +1,45 @@
+set pagination off
+set confirm off
+
+# Load binary
+file navigate.out
+# Start the debugged program stopping at the beginning of the main procedure
+start
+
+# Show source
+list
+
+# Goto next line in source, stepping over function calls
+next
+# Show source
+list
+
+# Resume execution until next line in source, stepping over function calls
+next
+# Show source
+list
+
+# Create a breakpoint at line 27 in navigate.cpp
+break navigate.cpp:27
+# Continue execution until next breakpoint
+continue
+# Show source
+list
+
+# Resume execution until next line in source, stepping into function calls
+step
+# Show source
+list
+
+# Resume execution until next line in source, stepping over function calls
+next
+# Show source
+list
+
+# Continue running until just after function in the selected stack frame returns
+finish
+# Show source
+list
+
+# Quite the example
+quit
