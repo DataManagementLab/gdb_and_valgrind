@@ -1,4 +1,6 @@
 /*
+ * Generated with Google Gemini
+ *
  * Helgrind Complex Demonstration: Lock Order Violation (Deadlock)
  * * PURPOSE:
  * This program demonstrates a "Lock Inversion" or "Lock Order Violation".

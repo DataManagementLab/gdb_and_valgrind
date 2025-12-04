@@ -1,4 +1,6 @@
 /*
+ * Generated with Google Gemini
+ *
  * Valgrind Cachegrind Demonstration Program
  * * PURPOSE:
  * This program performs matrix multiplication using an intentionally
