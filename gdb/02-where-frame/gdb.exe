@@ -1,0 +1,116 @@
+set pagination off
+set confirm off
+# Load binary
+printf "(gdb) file where-frame.out\n"
+file where-frame.out
+echo \n\n\n
+
+# Set breakpoint to deepest level
+printf "(gdb) break where-frame.cpp:8\n"
+break where-frame.cpp:8
+echo \n\n\n
+
+# Launch program, only halt on breakpoints or exceptions
+printf "(gdb) run\n"
+run
+echo \n\n\n
+
+# Show stack trace
+printf "(gdb) where\n"
+where
+echo \n\n\n
+
+# Change to Frame 0 [func5]
+printf "(gdb) frame 0\n"
+frame 0
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Print var5 in current stack frame (Frame 0, func5)
+printf "(gdb) print var5\n"
+print var5
+echo \n\n\n
+
+# Change to Frame 1 [func4]
+printf "(gdb) frame 1\n"
+frame 1
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Print var4 in current stack frame (Frame 1)
+printf "(gdb) print var4\n"
+print var4
+echo \n\n\n
+
+# Change to Frame 2 [func3]
+printf "(gdb) frame 2\n"
+frame 2
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Print var3 in current stack frame (Frame 2)
+printf "(gdb) print var3\n"
+print var3
+echo \n\n\n
+
+# Change to Frame 3 [func2]
+printf "(gdb) frame 3\n"
+frame 3
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Print var2 in current stack frame (Frame 3)
+printf "(gdb) print var2\n"
+print var2
+echo \n\n\n
+
+# Change to Frame 4 [func1]
+printf "(gdb) frame 4\n"
+frame 4
+echo \n\n\n
+
+# Show source\n
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Print var1 in current stack frame (Frame 4)
+printf "(gdb) print var1\n"
+print var1
+echo \n\n\n
+
+# Change to Frame 5 [main]
+printf "(gdb) frame 5\n"
+frame 5
+echo \n\n\n
+
+# Show source
+printf "(gdb) list\n"
+list
+echo \n\n\n
+
+# Print var_main in current stack frame (Frame 5)
+printf "(gdb) print var_main\n"
+print var_main
+echo \n\n\n
+
+# Quit the example
+printf "(gdb) quit\n"
+quit
+echo \n\n\n

@@ -25,8 +25,9 @@ void use_uninitialized_value() {
 
     // Memcheck will flag this line because data[1] has an unknown state.
     int sum = data[0] + data[1];
+    bool sum_even = sum & 1;
 
-    std::cout << "Result of uninitialized read (will be junk, but Helgrind flags it): " << sum << "\n";
+    std::cout << "Is result even? " << sum_even << "\n";
     delete[] data;
 }
 
@@ -51,6 +52,10 @@ void memory_leak() {
 
     // Allocate 100 bytes on the heap
     char* big_block = new char[100];
+
+    size_t ptr = 0;
+    ptr = 5;
+    *(size_t*) ptr = 0;
 
     // We intentionally forget to call 'delete[] big_block;'
     // Memcheck will report 100 bytes definitely lost at the end of execution.

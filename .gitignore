@@ -2,4 +2,4 @@
 *.out
 .settings/
 .vscode/
-cachegrind-*
+cachegrind.out.*
