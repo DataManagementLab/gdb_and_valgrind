@@ -1,9 +1,9 @@
 CXX = g++
 CFLAGS = -g -O0
-PROGRAM = memcheck_tutorial
+PROGRAM = fishy_args
 
-${PROGRAM}.out: ${PROGRAM}.cpp
-	${CXX} ${CFLAGS} -o ${PROGRAM}.out ${PROGRAM}.cpp
+${PROGRAM}.out: ${PROGRAM}.c
+	${CXX} ${CFLAGS} -o ${PROGRAM}.out ${PROGRAM}.c
 
 clean:
 	rm ${PROGRAM}.out
