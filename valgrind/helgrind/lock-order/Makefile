@@ -1,6 +1,6 @@
 CXX = g++
 CFLAGS = -g -O0 -DNDEBUG
-PROGRAM = locks
+PROGRAM = lock_order
 
 ${PROGRAM}.out: ${PROGRAM}.c
 	${CXX} ${CFLAGS} -o ${PROGRAM}.out ${PROGRAM}.c
