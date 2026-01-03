@@ -1,9 +1,9 @@
 TARGET=compute_bound
 
-${TARGET}:${TARGET}.c
+${TARGET}.out:${TARGET}.c
 	gcc -g -O1 ${TARGET}.c -o ${TARGET}.out -lm
 
-demo: ${TARGET}
+demo: ${TARGET}.out
 	perf stat -d ./${TARGET}.out
 
 clean:
